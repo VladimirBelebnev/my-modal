@@ -38,6 +38,6 @@ Ideal HTML code structure (сlass names can be changed)
 6. timeShowModal – time after which the modal window will appear (default is 60 seconds). ***Time is written in milliseconds*** (1 second = 1000 milliseconds). No quotes, dots, etc.
 7. scrollSelector – an optional attribute that matches the same modal selector to open if the user has scrolled to the bottom of the page (for example, ***'.popup'***).
    
-**modalSelector,triggerSelector and closeSelector are required attribute!
+**modalSelector,triggerSelector and closeSelector are required attribute!**
 
     
