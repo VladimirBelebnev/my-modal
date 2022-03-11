@@ -8,7 +8,7 @@ This script makes using modals as simple and fast as possible. You need to enter
     <div class="popup">
         <div class="popup__dialog">
             <div class="popup__content">
-                <button type="button" class="popup-close">&times;</button>
+                <button class="popup-close">&times;</button>
                 
             </div>
         </div>
