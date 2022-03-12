@@ -5,7 +5,7 @@ This script makes using modals as simple and fast as possible. You need to enter
     
     <button class="popup-trigger"></button>
 
-    <div class="popup">
+    <div class="popup" data-modal>
         <div class="popup__dialog">
             <div class="popup__content">
                 <button class="popup-close">&times;</button>
@@ -14,7 +14,9 @@ This script makes using modals as simple and fast as possible. You need to enter
         </div>
     </div>
     
-Ideal HTML code structure (сlass names can be changed)
+Ideal HTML code structure (сlass names can be changed). The style.css file has ready-made classes for this structure.
+
+**Attention, if you use several different modal windows on your page, you must add the [data-modal] (as in the example above) attribute so that no bugs arise**
 
 ### JS settings
 
@@ -25,8 +27,10 @@ Ideal HTML code structure (сlass names can be changed)
             closeSelector: '.popup-close',
             modalSelectorDisplay: '(default: block)',
             timeSelector: '.popup',
+            timeSelectorDisplay: '(default: block)',
             timeShowModal: (default: 60000),
-            scrollSelector: '.popup'
+            scrollSelector: '.popup',
+            scrollSelectorDisplay: '(default: block)',
         });
     </script>
    
@@ -35,8 +39,10 @@ Ideal HTML code structure (сlass names can be changed)
 3. closeSelector – the button to closes modal window (in the example above, this ***'.popup-close'***).
 4. modalSelectorDisplay – the display value that the modal window should have (for example: display-block, flex, etc.). Default value – ***display: block***.
 5. timeSelector – an optional attribute that fits the same modal window selector to make it appear after a certain amount of time (default is 60 seconds) (for example, ***'.popup'***).
-6. timeShowModal – time after which the modal window will appear (default is 60 seconds). ***Time is written in milliseconds*** (1 second = 1000 milliseconds). No quotes, dots, etc.
-7. scrollSelector – an optional attribute that matches the same modal selector to open if the user has scrolled to the bottom of the page (for example, ***'.popup'***).
+6. timeSelectorDisplay – the display value that a modal should have that pops up after a certain amount of time (for example: display-block, flex, etc.). Default value – ***display: block***.
+7. timeShowModal – time after which the modal window will appear (default is 60 seconds). ***Time is written in milliseconds*** (1 second = 1000 milliseconds). No quotes, dots, etc.
+8. scrollSelector – an optional attribute that matches the same modal selector to open if the user has scrolled to the bottom of the page (for example, ***'.popup'***).
+9. scrollSelectorDisplay – the display value that the modal should have to opens if the user has scrolled to the bottom of the page (for example: display-block, flex, etc.). Default value – ***display: block***.
    
 **modalSelector,triggerSelector and closeSelector are required attribute!**
 
