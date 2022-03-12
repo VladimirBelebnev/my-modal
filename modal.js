@@ -50,7 +50,7 @@ const modal = ({triggerSelector, modalSelector, modalSelectorDisplay = 'block', 
     });
     
     document.addEventListener('keydown', (event) => {
-        if (event.code === 'Escape' && modal.cssText.style = modalSelectorDisplay) {
+        if (event.code === 'Escape' && modal) {
             closeModal();
 
             windows.forEach(item => {
