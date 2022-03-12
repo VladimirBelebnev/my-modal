@@ -6,6 +6,8 @@ modal({
     triggerSelector: '.popup-trigger',
     closeSelector: '.popup-close',
     timeSelector: '.popup',
+    timeSelectorDisplay: '(default: block)',
     timeShowModal: (default: 60000),
-    scrollSelector: '.popup'
+    scrollSelector: '.popup',
+    scrollSelectorDisplay: '(default: block)',
 });
