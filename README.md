@@ -28,7 +28,7 @@ Ideal HTML code structure (сlass names can be changed)
             timeShowModal: (default: 60000),
             scrollSelector: '.popup'
         });
-    <script/>
+    </script>
    
 1. modalSelector – modal window selector (in the example above, this ***'.popup'***).
 2. triggerSelector – the button to open modal window (in the example above, this ***'.popup-trigger'***).
