@@ -3,7 +3,7 @@ This script makes using modals as simple and fast as possible. You need to enter
 
 ### HTML structure:
     
-    <button class="popup-trigger"><button/>
+    <button class="popup-trigger"></button>
 
     <div class="popup">
         <div class="popup__dialog">
