@@ -1,4 +1,4 @@
-const modal = ({triggerSelector, modalSelector, modalSelectorDisplay = 'block', closeSelector, timeSelector, timeShowModal = 60000, scrollSelector}) => {
+const modal = ({triggerSelector, modalSelector, modalSelectorDisplay = 'block', closeSelector, timeSelector, timeSelectorDisplay = 'block', timeShowModal = 60000, scrollSelector, scrollSelectorDisplay = 'block'}) => {
     const triggerBtn = document.querySelectorAll(triggerSelector),
         modal = document.querySelector(modalSelector),
         closeBtn = modal.querySelector(closeSelector),
@@ -61,7 +61,7 @@ const modal = ({triggerSelector, modalSelector, modalSelectorDisplay = 'block', 
 
     function showModalByTime(selector, time) {
         setTimeout(() => {
-            document.querySelector(selector).style.display = 'block';
+            document.querySelector(selector).style.display = timeSelectorDisplay;
             document.body.style.overflow = 'hidden';
         }, time);
     }
@@ -70,7 +70,7 @@ const modal = ({triggerSelector, modalSelector, modalSelectorDisplay = 'block', 
 
     function showModalByScroll() {
         if (window.pageYOffset + document.documentElement.clientHeight >= document.documentElement.scrollHeight) {
-            document.querySelector(scrollSelector).style.display = 'block';
+            document.querySelector(scrollSelector).style.display = scrollSelectorDisplay;
             document.body.style.overflow = 'hidden';
 
             window.removeEventListener('scroll', showModalByScroll);
