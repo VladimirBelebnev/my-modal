@@ -58,11 +58,21 @@ const modal = ({triggerSelector, modalSelector, modalSelectorDisplay = 'block', 
             });
         }
     });
-
+    
     function showModalByTime(selector, time) {
         setTimeout(() => {
-            document.querySelector(selector).style.display = timeSelectorDisplay;
-            document.body.style.overflow = 'hidden';
+            let display;
+
+            document.querySelectorAll('[data-modal]').forEach(item => {
+                if (getComputedStyle(item).display !== 'none') {
+                    display = 'block';
+                }
+            });
+
+            if (!display) {
+                document.querySelector(selector).style.display = timeSelectorDisplay;
+                document.body.style.overflow = 'hidden';
+            }
         }, time);
     }
 
