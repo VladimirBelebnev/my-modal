@@ -73,7 +73,7 @@ const modal = ({triggerSelector, modalSelector, modalSelectorDisplay = 'block', 
                 document.querySelector(selector).style.display = timeSelectorDisplay;
                 document.body.style.overflow = 'hidden';
                 
-                scroll = calcScroll();
+                let scroll = calcScroll();
                 document.body.style.marginRight = `${scroll}px`;
             }
         }, time);
