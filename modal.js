@@ -72,6 +72,9 @@ const modal = ({triggerSelector, modalSelector, modalSelectorDisplay = 'block', 
             if (!display) {
                 document.querySelector(selector).style.display = timeSelectorDisplay;
                 document.body.style.overflow = 'hidden';
+                
+                scroll = calcScroll();
+                document.body.style.marginRight = `${scroll}px`;
             }
         }, time);
     }
