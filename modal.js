@@ -1,4 +1,6 @@
 const modal = ({triggerSelector, modalSelector, modalSelectorDisplay = 'block', closeSelector, timeSelector, timeSelectorDisplay = 'block', timeShowModal = 60000, scrollSelector, scrollSelectorDisplay = 'block'}) => {
+    let btnPressed = false;
+    
     const triggerBtn = document.querySelectorAll(triggerSelector),
         modal = document.querySelector(modalSelector),
         closeBtn = modal.querySelector(closeSelector),
@@ -26,6 +28,8 @@ const modal = ({triggerSelector, modalSelector, modalSelectorDisplay = 'block', 
             windows.forEach(item => {
                 item.style.display = 'none';
             });
+            
+            btnPressed = true;
 
             showModal();
         });
@@ -69,7 +73,7 @@ const modal = ({triggerSelector, modalSelector, modalSelectorDisplay = 'block', 
                 }
             });
 
-            if (!display) {
+            if (!display && !btnPressed) {
                 document.querySelector(selector).style.display = timeSelectorDisplay;
                 document.body.style.overflow = 'hidden';
                 
@@ -82,7 +86,7 @@ const modal = ({triggerSelector, modalSelector, modalSelectorDisplay = 'block', 
     showModalByTime(timeSelector, timeShowModal);
 
     function showModalByScroll() {
-        if (window.pageYOffset + document.documentElement.clientHeight >= document.documentElement.scrollHeight) {
+        if (!btnPressed && (window.pageYOffset + document.documentElement.clientHeight >= document.documentElement.scrollHeight)) {
             document.querySelector(scrollSelector).style.display = scrollSelectorDisplay;
             document.body.style.overflow = 'hidden';
 
