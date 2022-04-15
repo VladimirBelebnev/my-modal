@@ -1,4 +1,5 @@
-# my-modal
+# my-modal 📺
+
 This script makes using modals as simple and fast as possible. You need to enter several necessary values and the magic will happen.The script can be used for different modal windows, configuring each window separately. It includes such necessary things as: fixing a bug with jumping content due to the disappearance of the scroll, popping up a modal window after a certain time (by default it is 60 seconds), as well as popping up a modal window when the end of the page is reached.
 
 ### HTML structure
@@ -14,7 +15,7 @@ This script makes using modals as simple and fast as possible. You need to enter
         </div>
     </div>
     
-Ideal HTML code structure (сlass names can be changed). The style.css file has ready-made classes for this structure.
+❗Ideal HTML code structure (сlass names can be changed). The style.css file has ready-made classes for this structure.
 
 **Attention, if you use several different modal windows on your page, you must add the [data-modal] (as in the example above) attribute so that no bugs arise**
 
